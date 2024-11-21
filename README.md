@@ -23,4 +23,6 @@ SENSOR GAS BUTANO
 GPS NEOO 6M
 [https://www.youtube.com/watch?v=ncNTirLaWao&list=PLirOJo-HO7RyJF5EvjP3r9Z4mwQG8G94B&index=4](https://www.youtube.com/watch?v=ncNTirLaWao&list=PLirOJo-HO7RyJF5EvjP3r9Z4mwQG8G94B&index=4)
 
-![promini_error.png](promini_error.png)
+![promini_conexion.png](images/promini_conexion.png)
+
+![promini_error.png](images/promini_error.png)
