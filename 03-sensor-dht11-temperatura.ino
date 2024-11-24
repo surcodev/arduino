@@ -1,28 +1,35 @@
 #include <DHT.h>
 
-#define DHTTYPE DHT11
-#define DHTPIN 9
+// Pines y tipo del sensor DHT
+#define DHTPIN 2       // Pin donde está conectado el sensor DHT
+#define DHTTYPE DHT11  // Tipo de sensor DHT (puede ser DHT11, DHT22, etc.)
+
+float humedad;
+float temperatura;
+float indice;
 
 DHT dht(DHTPIN, DHTTYPE);
 
-void setup(){
+void setup() {
   Serial.begin(9600);
   dht.begin();
 }
 
-void loop(){
-  delay(2000);
-  float humidity = dht.readHumidity();
-  float temperature = dht.readTemperature();
+void loop() {
+  humedad = dht.readHumidity();
+  temperatura = dht.readTemperature(); // Por defecto, la temperatura estará en Celsius.
+                                       // Para Fahrenheit, coloca "true" como argumento.
 
-  if(isnan(humidity) || isnan(temperature)){
-    Serial.print("Error en el sensor");
+  if (isnan(humedad) || isnan(temperatura)) {
+    Serial.println("Error de lectura del sensor");
     return;
   }
+
+  indice = dht.computeHeatIndex(temperatura, humedad, false); // 'false' para Celsius.
+
   Serial.print("Humedad: ");
-  Serial.print(humidity);
+  Serial.print(humedad);
   Serial.print("% Temperatura: ");
-  Serial.print(temperature);
+  Serial.print(temperatura);
   Serial.println("°C");
-  delay(1000);
 }
