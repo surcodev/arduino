@@ -15,13 +15,14 @@ void loop(){
   float humidity = dht.readHumidity();
   float temperature = dht.readTemperature();
 
-  if(isnan(humedity) || isnan(temperaature)){
-    Serial.print(“Error en el sensor”);
+  if(isnan(humidity) || isnan(temperature)){
+    Serial.print("Error en el sensor");
     return;
   }
-  Serial.print("Temperatura: ");
-  Serial.print(temperature);
   Serial.print("Humedad: ");
-  Serial.println(humidity);
+  Serial.print(humidity);
+  Serial.print("% Temperatura: ");
+  Serial.print(temperature);
+  Serial.println("°C");
   delay(1000);
 }
