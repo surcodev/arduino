@@ -1,7 +1,7 @@
 #include <DHT.h>
 
 // Pines y tipo del sensor DHT
-#define DHTPIN 2       // Pin donde está conectado el sensor DHT
+#define DHTPIN 6       // Pin donde está conectado el sensor DHT
 #define DHTTYPE DHT11  // Tipo de sensor DHT (puede ser DHT11, DHT22, etc.)
 
 float humedad;
