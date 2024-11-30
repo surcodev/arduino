@@ -3,11 +3,11 @@
 #include <DHT.h>
 
 const char *ssid = "Wifi_Name";
-const char *password = "Password";
+const char *password = "B974Ab29#";
 const char *scriptURL = "https://script.google.com/macros/s/AKfycbxopnGV484Jv9Px9ShOVRhDezowFzhLsnbdJwILjl2bfLGFhfQbxd_pyyP-LFc09g4o/exec"; // Google Web App URL
 
 // DHT
-const uint8_t dhtPin = 14;
+const uint8_t dhtPin = 4;
 const uint8_t dhtType = 11;
 DHT dht(dhtPin, dhtType);
 
@@ -25,7 +25,7 @@ void setup() {
         Serial.print(".");
     }
     Serial.println("\nConnected to WiFi");
-    dth.begin();
+    dht.begin();
 
     // seed the random number generator
     randomSeed(analogRead(0));
