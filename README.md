@@ -10,6 +10,7 @@
 - Tools -> board -> esp32 -> esp32 Dev Module -> Port COMX
 - Files -> Examples -> WiFi -> WiFiScan
 
+- Add Prederences: `https://arduino.esp8266.com/stable/package_esp8266com_index.json,https://dl.espressif.com/dl/package_esp32_index.json`
 
 ESP32
 [https://www.youtube.com/watch?v=BQBFJ8qc3z4&list=PLirOJo-HO7RyJF5EvjP3r9Z4mwQG8G94B](https://www.youtube.com/watch?v=BQBFJ8qc3z4&list=PLirOJo-HO7RyJF5EvjP3r9Z4mwQG8G94B)
